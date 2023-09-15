@@ -49,7 +49,38 @@ public class Concurso {
 			int intensidadLadrido, boolean requiereZonaVerde, boolean estaEntrenado, String alimentosNoTolerables, 
 			boolean cazaAnimalesPequenios, String documentoIdentidadDuenio, String idCompetencia, String formaPago) {
 		
-		Inscripcion i;
+		int idInscripcion = (int)Math.random()*1000;
+		
+		Inscripcion i = new Inscripcion(idInscripcion, formaPago);
+		i.registrarMascota(nombreMascota, raza, edad, tipoMascota, intensidadLadrido, requiereZonaVerde, estaEntrenado, alimentosNoTolerables, cazaAnimalesPequenios);
+		
+		Competencia comp = null;		
+		
+		// Buscar competencias
+		for (int j = 0; j < competencias.size(); j++) {
+			Competencia c = competencias.get(j);
+			if(c.getId().equals(idCompetencia)){
+				comp = c;
+				break;
+			}
+		}
+		
+		Persona pers = null;
+		
+		// Buscar personas
+		for (int j = 0; j < personas.size(); j++) {
+			Persona p = personas.get(j);
+			if(p.getDocumentoIdentidad().equals(documentoIdentidadDuenio)) {
+				pers = p;
+				break;
+			}
+		}
+		
+		
+		i.asignarDuenioMascota(pers);
+		i.asignarCompetenciaMascota(comp);
+		inscripciones.add(i);
+		
 		
 		return "";
 	}

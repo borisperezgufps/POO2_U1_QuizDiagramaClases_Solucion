@@ -21,6 +21,14 @@ public class Mascota {
 		this.id = id;
 		this.dueño = dueño;
 	}
+	
+	public Mascota(String nombre, String raza, int edad, String id) {
+		super();
+		this.nombre = nombre;
+		this.raza = raza;
+		this.edad = edad;
+		this.id = id;
+	}
 
 	public String getNombre() {
 		return nombre;

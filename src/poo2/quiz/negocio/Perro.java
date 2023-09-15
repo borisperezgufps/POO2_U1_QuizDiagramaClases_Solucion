@@ -5,12 +5,16 @@ public class Perro extends Mascota{
 	private int intensidadLadrido;
 	private boolean requiereZonaVerde;
 	private boolean estaEntrenado;
-	public Perro(int intensidadLadrido, boolean requiereZonaVerde, boolean estaEntrenado) {
-		super();
+	
+	public Perro(String nombreMascota, String raza, int edad, String id, int intensidadLadrido, boolean requiereZonaVerde, boolean estaEntrenado) {
+		super(nombreMascota, raza, edad, id);
 		this.intensidadLadrido = intensidadLadrido;
 		this.requiereZonaVerde = requiereZonaVerde;
 		this.estaEntrenado = estaEntrenado;
 	}
+	
+	
+	
 	public int getIntensidadLadrido() {
 		return intensidadLadrido;
 	}

@@ -4,6 +4,14 @@ public class Gato extends Mascota {
 
 	private String alimentosNoTolerables;
 	private boolean cazaAnimalesPequenios;
+	
+	public Gato(String nombreMascota, String raza, int edad, String id, String alimentosNoTolerables, boolean cazaAnimalesPequenios) {
+		super(nombreMascota, raza, edad, id);
+		this.alimentosNoTolerables = alimentosNoTolerables;
+		this.cazaAnimalesPequenios = cazaAnimalesPequenios;
+	}
+	
+	
 	public String getAlimentosNoTolerables() {
 		return alimentosNoTolerables;
 	}
@@ -16,11 +24,8 @@ public class Gato extends Mascota {
 	public void setCazaAnimalesPequenios(boolean cazaAnimalesPequenios) {
 		this.cazaAnimalesPequenios = cazaAnimalesPequenios;
 	}
-	public Gato(String alimentosNoTolerables, boolean cazaAnimalesPequenios) {
-		super();
-		this.alimentosNoTolerables = alimentosNoTolerables;
-		this.cazaAnimalesPequenios = cazaAnimalesPequenios;
-	}
+	
+	
 	
 	
 	
